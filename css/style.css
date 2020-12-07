@@ -211,9 +211,47 @@ a:focus {
 }
 
 
+/*******************************/
+/******* Call to Action ********/
+/*******************************/
+.call-to-action {
+    position: relative;
+    padding: 15px 0;
+    background: linear-gradient(to right, #00539C, #4F84C4 50%);
+}
+
+.service-page .call-to-action {
+    margin-top: 45px;
+}
+
+.call-to-action h2 {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.call-to-action a {
+    float: right;
+    padding: 10px 50px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2c3035;
+    background: #ffffff;
+    border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .call-to-action a {
+        float: left;
+        margin-top: 30px;
+    }
+}
+
 
 /*******************************/
-/******** Slideshow CSS ********/
+/******** Carousel CSS *********/
 /*******************************/
 .page-header {
     position: relative;
@@ -307,66 +345,6 @@ a:focus {
 @keyframes fadeinout {
   0% { opacity: 0.4; }
   100% { opacity: 1; }
-}
-
-
-/*******************************/
-/*********** Hero CSS **********/
-/*******************************/
-.hero {
-    position: relative;
-    width: 100%;
-    padding: 45px 0;
-}
-
-@media (min-width: 768px) {
-    .hero {
-        padding: 45px 60px;
-    }
-}
-
-.hero h2 {
-    margin: 0;
-    font-size: 45px;
-    font-weight: 800;
-}
-
-.hero h2 span {
-    color: #4F84C4;
-}
-
-.hero p {
-    margin: 10px 0 20px 0;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.hero a.btn {
-    position: relative;
-    padding: 10px 35px;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #ffffff;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(#4F84C4, #00539C);
-    transition: .5s;
-}
-
-.hero a.btn:hover {
-    background: linear-gradient(#00539C, #4F84C4);
-}
-
-.hero img {
-    max-width: 100%;
-    max-height: 600px;
-}
-
-@media (max-width: 767.98px) {
-    .hero img {
-        margin-top: 30px;
-    }
 }
 
 
@@ -1119,51 +1097,6 @@ a:focus {
     }
 }
 
-
-/*******************************/
-/******* Call to Action ********/
-/*******************************/
-.call-to-action {
-    position: relative;
-    padding: 50px 0;
-    background: linear-gradient(to right, #00539C, #4F84C4 50%);
-}
-
-.service-page .call-to-action {
-    margin-top: 45px;
-}
-
-.call-to-action h2 {
-    color: #ffffff;
-    font-size: 35px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.call-to-action p {
-    margin: 0;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.call-to-action a {
-    float: right;
-    padding: 10px 50px;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #2c3035;
-    background: #ffffff;
-    border-radius: 30px;
-}
-
-@media (max-width: 768px) {
-    .call-to-action a {
-        float: left;
-        margin-top: 30px;
-    }
-}
 
 
 /*******************************/
