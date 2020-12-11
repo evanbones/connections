@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+    	<meta charset="utf-8">
+        <title>About Us</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Vernon Secondary School Connections Class" name="keywords">
+        <meta content="Vernon Secondary School Connections Class" name="description">
+
+        
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+        
+        <!-- Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+                body {
+                  display: block;
+                  box-sizing: border-box;
+                  height: 100vh;
+                  background: url(img/header.jpg) no-repeat center/cover;
+                }
+    
+                
+                #constellation li {
+                  display: inline-block;
+                  list-style-type: none;
+                }
+                
+                #constellation li:nth-child(1) img {
+                  left: 5%;
+                }
+                
+				.zoom {
+				  transition: transform .2s;
+				}
+				
+				.zoom:hover {
+  				  transform: scale(2);
+				}
+				
+                #constellation li:nth-child(2) img {
+                  left: 10%;
+                  bottom: 76%;
+                }
+                
+                #constellation li:nth-child(3) img {
+                  left: 15%;
+                  bottom: 86%;
+                }
+                
+                #constellation li:nth-child(4) img {
+                  left: 20%;
+                }
+                
+                #constellation img {
+                  position: absolute;
+                  width: 34px;
+				  background-color: transparent;
+				  border: none;
+                  height: 34px;
+                  display: inline-block;
+                  margin: 0 0.2em 0 0.2em;
+                  outline: none;
+                  font-weight: bold;;
+                  font-size: 20px;
+                  box-sizing: border-box;
+                  text-align:center;
+                  cursor: pointer;
+                  padding: 0;
+                }
+				
+				#constellation .pulse {
+				  animation-name: pulse;
+                  animation-duration: 3s;
+                  animation-iteration-count: infinite;
+				}
+                
+                @media all and (max-width:768px) {
+                    #constellation button {
+                        display: block;
+                        margin: 0.2em auto;
+                    }
+                }
+                
+                @keyframes pulse {
+                  from { transform: scale(1); }
+                  50% { transform: scale(0.85); }
+                  to { transform: scale(1); }
+                }
+				
+        		.pulse:hover {
+				  animation-play-state: paused;
+				  z-index: 4;
+				}
+            </style>
+    </head>
+    <body>
+
+<div id="constellation" class="container-fluid">
+<div class="row align-items-center">
+  <ul>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  </ul>
+</div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+$(document).ready(function(){
+	$(".pulse").hover(function(){
+		$(this).removeClass("pulse");
+	});
+});
+	</script>
+</body>
+</html>
