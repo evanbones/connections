@@ -1,166 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html> 
+    <head>
+    	<meta charset="utf-8">
+        <title>About Us</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Vernon Secondary School Connections Class" name="keywords">
+        <meta content="Vernon Secondary School Connections Class" name="description">
 
-<head>
-  <style>
-    #constellation {
-      display: block;
-      box-sizing: border-box;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-      background: url(img/header.jpg) no-repeat center/cover;
-    }
+        
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+        
+        <!-- Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+                body {
+                  display: block;
+                  box-sizing: border-box;
+                  height: 100vh;
+                  background: url(img/header.jpg) no-repeat center/cover;
+                }
+    
+                
+                #constellation li {
+                  display: inline-block;
+                  list-style-type: none;
+                }
+                
+                #constellation li:nth-child(1) img {
+                  left: 5%;
+                }
+                
+				.zoom {
+				  transition: transform .2s;
+				}
+				
+				.zoom:hover {
+  				  transform: scale(2);
+				}
+				
+                #constellation li:nth-child(2) img {
+                  left: 10%;
+                  bottom: 76%;
+                }
+                
+                #constellation li:nth-child(3) img {
+                  left: 15%;
+                  bottom: 86%;
+                }
+                
+                #constellation li:nth-child(4) img {
+                  left: 20%;
+                }
+                
+                #constellation img {
+                  position: absolute;
+                  width: 34px;
+				  background-color: transparent;
+				  border: none;
+                  height: 34px;
+                  display: inline-block;
+                  margin: 0 0.2em 0 0.2em;
+                  outline: none;
+                  font-weight: bold;;
+                  font-size: 20px;
+                  box-sizing: border-box;
+                  text-align:center;
+                  cursor: pointer;
+                  padding: 0;
+                }
+				
+				#constellation .pulse {
+				  animation-name: pulse;
+                  animation-duration: 3s;
+                  animation-iteration-count: infinite;
+				}
+                
+                @media all and (max-width:768px) {
+                    #constellation button {
+                        display: block;
+                        margin: 0.2em auto;
+                    }
+                }
+                
+                @keyframes pulse {
+                  from { transform: scale(1); }
+                  50% { transform: scale(0.85); }
+                  to { transform: scale(1); }
+                }
+				
+        		.pulse:hover {
+				  animation-play-state: paused;
+				  z-index: 4;
+				}
+            </style>
+    </head>
+    <body>
 
-    #constellation ul {
-      padding: 0;
-
-    }
-
-    #constellation li {
-      display: inline-block;
-      list-style-type: none;
-    }
-
-    #constellation li:nth-child(1) button {
-      background: #F3FFBD;
-    }
-
-    #constellation li:nth-child(2) button {
-      background: #247BA0;
-    }
-
-    #constellation li:nth-child(3) button {
-      background: #FF1654;
-    }
-
-    #constellation button {
-      position: relative;
-      background: rebeccapurple;
-      width: 100px;
-      height: 100px;
-      outline: none;
-      border-radius: 50%;
-      border: 5px solid white;
-      color: white;
-      font-weight: bold;
-      ;
-      font-size: 50px;
-      cursor: pointer;
-      padding: 0;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="constellation" class="container-fluid">
-    <div class="row align-items-center">
-      <ul>
-        <li>
-          <a href="files/ChaosCraft.7z"><button>A</button></a>
-        </li>
-        <li>
-          <button>B</button>
-        </li>
-        <li>
-          <button>C</button>
-        </li>
-        <li>
-          <button>D</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <script
-    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js">
-  </script>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
-  <script id="rendered-js">
-    class HoverButton {
-      constructor(el) {
-        this.el = el;
-        this.hover = false;
-        this.calculatePosition();
-        this.attachEventsListener();
-      }
-      attachEventsListener() {
-        window.addEventListener('mousemove', e => this.onMouseMove(e));
-        window.addEventListener('resize', e => this.calculatePosition(e));
-        window.addEventListener('scroll', e => this.calculatePosition(e));
-      }
-
-      calculatePosition() {
-        gsap.set(this.el, {
-          x: 0,
-          y: 0,
-          scale: 1
-        });
-
-        const box = this.el.getBoundingClientRect();
-        this.x = box.left + box.width * 0.5;
-        this.y = box.top + box.height * 0.5;
-        this.width = box.width;
-        this.height = box.height;
-      }
-
-      onMouseMove(e) {
-        let hover = false;
-        let hoverArea = this.hover ? 0.7 : 0.5;
-        let x = e.clientX - this.x;
-        let y = e.clientY - this.y;
-        let distance = Math.sqrt(x * x + y * y);
-        if (distance < this.width * hoverArea) {
-          hover = true;
-          if (!this.hover) {
-            this.hover = true;
-          }
-          this.onHover(e.clientX, e.clientY);
-        }
-
-        if (!hover && this.hover) {
-          this.onLeave();
-          this.hover = false;
-        }
-      }
-
-      onHover(x, y) {
-        gsap.to(this.el, {
-          x: (x - this.x) * 0.4,
-          y: (y - this.y) * 0.4,
-          scale: 4,
-          ease: 'power2.out',
-          duration: 0.4
-        });
-
-        this.el.style.zIndex = 10;
-      }
-      onLeave() {
-        gsap.to(this.el, {
-          x: 0,
-          y: 0,
-          scale: 1,
-          ease: 'elastic.out(1.2, 0.4)',
-          duration: 0.7
-        });
-
-        this.el.style.zIndex = 1;
-      }
-    }
-
-
-    const btn1 = document.querySelector('li:nth-child(1) button');
-    new HoverButton(btn1);
-
-    const btn2 = document.querySelector('li:nth-child(2) button');
-    new HoverButton(btn2);
-
-    const btn3 = document.querySelector('li:nth-child(3) button');
-    new HoverButton(btn3);
-
-    const btn4 = document.querySelector('li:nth-child(4) button');
-    new HoverButton(btn4);
-  </script>
+<div id="constellation" class="container-fluid">
+<div class="row align-items-center">
+  <ul>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  <li>
+    <img class="pulse zoom" src=img/icons/handshake.png>
+  </li>
+  </ul>
+</div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+$(document).ready(function(){
+	$(".pulse").hover(function(){
+		$(this).removeClass("pulse");
+	});
+});
+	</script>
 </body>
-
 </html>

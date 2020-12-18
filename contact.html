@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		
+        <meta charset="utf-8">
+        <title>Contact Us</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Vernon Secondary School Connections Class" name="keywords">
+        <meta content="Vernon Secondary School Connections Class" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+   
+        <!-- Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="brand">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="Connections Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:250-545-0701"><i class="fa fa-phone-alt"></i>(250) 545-0701</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:cogasawara@sd22.bc.ca"><i class="fa fa-envelope"></i>cogasawara@sd22.bc.ca</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+                                        <a href="https://twitter.com/vssconnections"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/vssconnections/"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="index.html" class="nav-item nav-link">Home</a>
+                                        <a href="about.html" class="nav-item nav-link">About</a>
+                                        <a href="profiles.html" class="nav-item nav-link">Profiles</a>
+                                        <a href="contact.html" class="nav-item nav-link active">Contacts</a>
+                                        <a href="mindfulness.html" class="nav-item nav-link">Mindfulness</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->      
+            
+            
+            <!-- Contact Start -->
+            <div class="contact">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                        	<h2 class="section-title">Contact Us</h2>
+                            <div class="form">
+                                <form action-"contact.php" method="post">
+                                    <div class="contact-section">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+                                    </div>
+                                    <div class="contact-section">
+                                        <label for="email">Your E-mail</label>
+                                        <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+                                    </div>
+                                    <div class="contact-section">
+                                        <label for="title">Send Your Message</label>
+                                        <input type="text" id="title" name="email_title" required placeholder="Message title">
+                                    </div>
+                                    <div class="contact-section">
+                                        <textarea id="message" name="visitor_message" placeholder="Message" required></textarea>
+                                    </div>
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                    	</div>
+                    	<div class="col-md-4">
+                        	<div class="location">
+                            	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2550.8297628456735!2d-119.25438948413448!3d50.25776370911099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1608224767964!5m2!1sen!2sca" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact End -->
+
+
+            <!-- Links Start -->
+            <div class="links">
+                <div class="container-fluid">
+                    <div class="section-header">
+                        <h2>Quick Links</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <a href="">
+                                <h3>Mindfulness</h3>
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <a href="">
+                                <h3>About</h3>
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </a>
+                       	</div>
+                        <div class="col-lg-3 col-md-6">
+                            <a href="">
+                                <h3>Profiles</h3>
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </a>
+                   		</div>
+                        <div class="col-lg-3 col-md-6">
+                            <a href="">
+                                <h3>Contact Us</h3>
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Links End -->
+
+
+            <!-- Footer Start -->
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="footer-about">
+                                <h2>Address</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>2100 15th Street Vernon BC V1T 9X7</p>
+                                <p><i class="fa fa-phone-alt"></i>250-545-0701</p>
+                                <p><i class="fa fa-envelope"></i>cogasawara@sd22.bc.ca</p>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="footer-link">
+                                        <h2>Links</h2>
+                                        <a href="https://sd22.bc.ca/">District Website</a>
+                                        <a href="https://www2.gov.bc.ca/gov/content/erase">Erase</a>
+                                        <a href="https://sd22.bc.ca/sogi/">SOGI</a>
+       
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="footer-link">
+                                    	<h2>Links</h2>
+                                        <a href="https://myschoolday.app/download.php">VSS My School Day App</a>
+                                        <a href="https://moodle.vlearn.ca/login/index.php">Moodle Login</a>
+                                        <a href="https://myeducation.gov.bc.ca/aspen/logon.do">MyEd Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; 2020 Vernon Secondary School Connections</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        
+   
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    </body>
+</html>
